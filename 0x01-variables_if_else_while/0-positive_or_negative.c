@@ -25,6 +25,6 @@ int main(void)
 	{
 		printf("n is negative\n");
 	}
-	printf("Exact value of n is: %d\n", n);
+	printf("%d is positive\n", n);
 	return (0);
 }
