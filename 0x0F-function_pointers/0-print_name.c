@@ -1,31 +1,16 @@
+#include "function_pointers.h"
 #include <stdio.h>
-
 /**
  * print_name - prints a name
- * @name: pointer to the char variable
- * @f: function pointer
- * print_char - prints a character
- * main - the main program
- */
-
+ * @name: pointer to char
+ * @f: pointer to function
+ * Return: nothing
+ **/
 void print_name(char *name, void (*f)(char *))
 {
-	while (*name != '\0')
-	{
+	if (name == NULL || f == NULL)
+		return;
+	else
 		f(name);
-		name++;
-	}
 }
 
-void print_char(char *c)
-{
-	putchar(*c);
-}
-
-int main(void)
-{
-	char name[] = "Becca Atuti";
-
-	print_name(name, print_char);
-	return (0);
-}
